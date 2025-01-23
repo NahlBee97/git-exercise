@@ -1,0 +1,1 @@
+ini adalah sebuah repository untuk exercise GIT
