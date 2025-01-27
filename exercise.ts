@@ -90,27 +90,19 @@ console.log(result.trim());
 // soal 7
 const w4: string = "The QuiCK BrOwN Fox";
 
-let chars2 = [];
+let chars2 = "";
 
 for (let i = 0; i < w4.length; i++) {
     if (w4[i] == w4[i].toUpperCase()) {
         let lower: string = w4[i].toLowerCase();
-        chars2.push(lower);
+        chars2 += lower;
     } else if (w4[i] == w4[i].toLowerCase()) {
         let upper: string = w4[i].toUpperCase();
-        chars2.push(upper);
+        chars2 += upper;
     }
 }
 
-// a variable to store chars left
-let result1: string = ""; 
-
-// turn left chars in array into a string
-for (let i = 0; i < chars2.length; i++) {
-    result1 += chars2[i];
-}
-
-console.log(result1);
+console.log(chars2);
 
 // soal 7
 let num1: number = 42;
@@ -157,11 +149,13 @@ if (typeof input == "string") {
 // soal 10
 const sentence: string = "An apple a day keep the doctor away";
 
+let charTochange: string = "a";
+
 let change = [];
 let result2 = "";
 
 for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] == "a" || sentence[i] == "A") {
+    if (sentence[i] == charTochange || sentence[i] == charTochange.toUpperCase()) {
         change.push("*");
     } else {
         change.push(sentence[i]);
@@ -172,3 +166,4 @@ for (let i = 0; i < change.length; i++) {
     result2 += change[i];    
 }
 console.log(result2);
+
